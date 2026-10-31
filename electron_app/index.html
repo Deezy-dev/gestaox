@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-AO">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OSDEL TECNOLOGIA · Gestão Integrada</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background-color: #0f172a;
+      color: #f8fafc;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 24px;
+      text-align: center;
+    }
+    .card {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 16px;
+      padding: 32px;
+      max-width: 520px;
+      width: 100%;
+      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.5);
+    }
+    .spinner {
+      width: 44px;
+      height: 44px;
+      border: 3px solid rgba(255, 255, 255, 0.15);
+      border-top-color: #3b82f6;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      margin: 0 auto 16px;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    h2 { font-size: 20px; font-weight: 700; margin-bottom: 8px; color: #ffffff; }
+    p { font-size: 13px; color: #94a3b8; line-height: 1.5; margin-bottom: 16px; }
+    .code-box {
+      background: #0b0f19;
+      border: 1px solid #334155;
+      border-radius: 8px;
+      padding: 12px;
+      font-family: monospace;
+      font-size: 13px;
+      color: #38bdf8;
+      text-align: left;
+      margin-bottom: 16px;
+      user-select: all;
+    }
+    .btn {
+      background: #2563eb;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 13px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .btn:hover { background: #1d4ed8; }
+  </style>
+</head>
+<body>
+  <div class="card" id="loading-card">
+    <div class="spinner"></div>
+    <h2>A iniciar o Gestão X Desktop...</h2>
+    <p>A sincronizar o ecossistema oficial da OSDEL Tecnologia...</p>
+  </div>
+
+  <div class="card" id="error-card" style="display: none;">
+    <div style="font-size: 36px; margin-bottom: 12px;">⚡</div>
+    <h2>Compilação do Sistema Web Necessária</h2>
+    <p>
+      O sistema web ainda não foi compilado na sua máquina. Para gerar os ficheiros e abrir com o visual idêntico ao sistema web, execute no seu terminal da pasta raiz:
+    </p>
+    <div class="code-box">
+      npm run build
+    </div>
+    <p style="font-size: 11.5px; color: #64748b;">
+      Dica: Ou inicie o servidor com <code>npm run dev</code> para ligação direta em tempo real.
+    </p>
+    <button class="btn" onclick="location.reload()">Verificar Novamente</button>
+  </div>
+
+  <script>
+    (function() {
+      var search = window.location.search || '';
+      var hash = window.location.hash || '';
+
+      // Tenta testar se o bundle local existe
+      function tryLoadBundle() {
+        var req = new XMLHttpRequest();
+        req.open('HEAD', 'dist/index.html', true);
+        req.onreadystatechange = function() {
+          if (req.readyState === 4) {
+            if (req.status === 200 || req.status === 0 && req.responseURL && req.responseURL.indexOf('dist') !== -1) {
+              window.location.replace('dist/index.html' + search + hash);
+            } else {
+              checkDevServer();
+            }
+          }
+        };
+        req.onerror = function() {
+          checkDevServer();
+        };
+        try {
+          req.send(null);
+        } catch(e) {
+          checkDevServer();
+        }
+      }
+
+      function checkDevServer() {
+        var devReq = new XMLHttpRequest();
+        devReq.open('HEAD', 'http://127.0.0.1:3000/', true);
+        devReq.timeout = 1000;
+        devReq.onreadystatechange = function() {
+          if (devReq.readyState === 4) {
+            if (devReq.status >= 200 && devReq.status < 500) {
+              window.location.replace('http://127.0.0.1:3000/' + search + hash);
+            } else {
+              showError();
+            }
+          }
+        };
+        devReq.onerror = showError;
+        devReq.ontimeout = showError;
+        try {
+          devReq.send(null);
+        } catch(e) {
+          showError();
+        }
+      }
+
+      function showError() {
+        document.getElementById('loading-card').style.display = 'none';
+        document.getElementById('error-card').style.display = 'block';
+        // Auto-retry a cada 3 segundos caso o usuário execute o build
+        setTimeout(tryLoadBundle, 3000);
+      }
+
+      // Executa a checagem
+      tryLoadBundle();
+    })();
+  </script>
+</body>
+</html>

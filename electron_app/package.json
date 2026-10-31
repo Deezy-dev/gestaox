@@ -1,0 +1,66 @@
+{
+  "name": "gestaox-desktop-electron",
+  "version": "1.0.0",
+  "description": "Gestão X - Cliente Desktop Electron para CRM e Gestão de Telecomunicações",
+  "main": "main.js",
+  "author": "Albert Mbuyi Zola",
+  "license": "MIT",
+  "scripts": {
+    "sync:dist": "node sync_dist.js",
+    "prebuild": "node sync_dist.js",
+    "prebuild:fibra": "node sync_dist.js",
+    "prebuild:tv": "node sync_dist.js",
+    "prebuild:both": "node sync_dist.js",
+    "start": "node sync_dist.js && npx --yes electron .",
+    "start:fibra": "node sync_dist.js && npx --yes electron main_fibra.js",
+    "start:tv": "node sync_dist.js && npx --yes electron main_tv.js",
+    "electron": "npm run start",
+    "electron:fibra": "npm run start:fibra",
+    "electron:tv": "npm run start:tv",
+    "dev": "electron .",
+    "build": "npm run build:both",
+    "build:fibra": "electron-builder --config electron-builder-fibra.json",
+    "build:tv": "electron-builder --config electron-builder-tv.json",
+    "build:both": "npm run build:fibra && npm run build:tv",
+    "build:win": "electron-builder --win --x64",
+    "build:portable": "electron-builder --win portable --x64",
+    "pack": "electron-builder --dir"
+  },
+  "devDependencies": {
+    "electron": "29.1.5",
+    "electron-builder": "24.13.3"
+  },
+  "build": {
+    "appId": "ao.gestaox.desktop",
+    "productName": "Gestão X Desktop",
+    "copyright": "Copyright © 2026 Gestão X",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ],
+      "icon": "assets/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Gestão X Desktop"
+    },
+    "files": [
+      "main.js",
+      "main_fibra.js",
+      "main_tv.js",
+      "preload.js",
+      "index.html",
+      "css/**/*",
+      "js/**/*",
+      "assets/**/*",
+      "dist/**/*"
+    ]
+  }
+}

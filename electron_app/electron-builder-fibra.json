@@ -1,0 +1,27 @@
+{
+  "appId": "ao.osdel.fibra.desktop",
+  "productName": "OSDEL Gestão - Fibra Óptica Desktop",
+  "copyright": "Copyright © 2026 OSDEL TECNOLOGIA",
+  "directories": {
+    "output": "dist_fibra_exe"
+  },
+  "electronVersion": "29.1.5",
+  "extraMetadata": {
+    "main": "main_fibra.js"
+  },
+  "artifactName": "OSDEL_Fibra_Desktop_Setup_${version}.${ext}",
+  "win": {
+    "target": "dir",
+    "icon": "assets/icon.ico"
+  },
+  "files": [
+    "main_fibra.js",
+    "main.js",
+    "preload.js",
+    "index.html",
+    "css/**/*",
+    "js/**/*",
+    "assets/**/*",
+    "dist/**/*"
+  ]
+}

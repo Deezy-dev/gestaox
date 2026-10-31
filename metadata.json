@@ -1,0 +1,8 @@
+{
+  "name": "Gestaox",
+  "description": "Sistema de Gestão Comercial, Operacional e Financeira da OSDEL Tecnologia para provedores de TV por Cabo e Internet Fibra Óptica.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
