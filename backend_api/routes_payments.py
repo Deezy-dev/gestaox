@@ -54,14 +54,28 @@ def create_payment():
         )
     )
 
+    payment_month = payload.get('payment_month') or payload.get('paymentMonth') or date.today().strftime('%Y-%m')
+
     client = None
     if client_id:
         client = Client.query.get(client_id)
         if client:
             client_name = client.full_name
-            client.status = 'active'
+            # Regra OSDEL: Multa de 1.000 Kz a partir do dia 6 (dias 1 a 5 tolerância regular).
+            # O cliente SÓ fica com status 'active' se pagar a mensalidade na totalidade (4.000 Kz em dias 1-5, ou 4.000 + 1.000 Kz multa a partir de dia 6).
+            current_day = date.today().day
+            expected_fee = float(client.monthly_fee or (4000.0 if getattr(client, 'service_type', 'tv') == 'tv' else 6500.0))
+            required_penalty = 1000.0 if (current_day >= 6 or client.status in ['late', 'suspended']) else 0.0
+            required_total = expected_fee + required_penalty
 
-    payment_month = payload.get('payment_month') or payload.get('paymentMonth') or date.today().strftime('%Y-%m')
+            past_payments = Payment.query.filter_by(client_id=client_id, payment_month=payment_month).all()
+            total_paid_month = sum(float(p.amount or 0.0) + float(p.penalty or 0.0) for p in past_payments) + total
+
+            if total_paid_month >= required_total:
+                client.status = 'active'
+            else:
+                client.status = 'late'
+
     raw_reference = (payload.get('reference') or '').strip()
 
     # BLOQUEIO RIGOROSO DE DUPLICADOS (Backend PythonAnywhere)
@@ -74,14 +88,19 @@ def create_payment():
                 'message': f'Operação Bloqueada: A referência "{raw_reference}" já foi liquidada anteriormente no recibo #{dup_ref.id} em {dup_ref.paid_at.strftime("%Y-%m-%d") if dup_ref.paid_at else ""}.'
             }), 409
 
-    # 2. Bloqueio por Mês/Competência do Cliente
+    # 2. Bloqueio por Mês/Competência do Cliente (se já estiver liquidado totalmente)
     if client_id and payment_month:
-        dup_month = Payment.query.filter_by(client_id=client_id, payment_month=payment_month).first()
-        if dup_month:
-            return jsonify({
-                'success': False,
-                'message': f'Operação Bloqueada: O cliente #{client_id} já possui a mensalidade de {payment_month} registada no recibo #{dup_month.id}.'
-            }), 409
+        existing_payments = Payment.query.filter_by(client_id=client_id, payment_month=payment_month).all()
+        if existing_payments:
+            past_paid = sum(float(p.amount or 0.0) + float(p.penalty or 0.0) for p in existing_payments)
+            expected_fee = float(client.monthly_fee or 4000.0) if client else 4000.0
+            current_day = date.today().day
+            required_total = expected_fee + (1000.0 if current_day >= 6 else 0.0)
+            if past_paid >= required_total:
+                return jsonify({
+                    'success': False,
+                    'message': f'Operação Bloqueada: O cliente #{client_id} já liquidou integralmente a mensalidade de {payment_month} no recibo #{existing_payments[0].id}.'
+                }), 409
 
     reference = raw_reference or f"REC-{Date_now_id()}"
 

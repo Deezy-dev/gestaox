@@ -102,7 +102,8 @@ export function FiberAutomaticCutsView() {
         return currentDay >= cutDayThreshold || c.status === 'late' || c.status === 'suspended';
       })
       .map((c: any) => {
-        const debt = Number(c.monthlyFee || c.monthlyPrice || 8500) + (c.status === 'late' ? 1500 : 0);
+        const penalty = (c.status === 'late' || c.status === 'suspended') && currentDay >= 6 ? 1000 : 0;
+        const debt = Number(c.monthlyFee || c.monthlyPrice || 8500) + penalty;
         const pppoeUser = c.email || `${c.fullName.toLowerCase().replace(/\s+/g, '.')}@osdel.ao`;
         return {
           ...c,

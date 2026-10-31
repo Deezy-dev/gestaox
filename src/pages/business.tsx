@@ -2835,7 +2835,7 @@ export function PaymentsPage() {
     }
     setPaymentAmount(String(base));
 
-    // Penalty check: after day 5, apply 1000 Kz
+    // Multa automática: de dia 1 a 5 é prazo regular (0 Kz); a partir do dia 6 aplica-se multa por atraso
     const currentDay = new Date().getDate();
     const dueDay = Number(settings.paymentDueDay || 5);
     if (currentDay > dueDay) {
@@ -3146,10 +3146,14 @@ export function PaymentsPage() {
                     A taxa de renovação contratual segundo o regulamento é de 10.000 Kz.
                   </div>
                 )}
-                {new Date().getDate() > Number(settings.paymentDueDay || 5) && (
+                {new Date().getDate() > Number(settings.paymentDueDay || 5) ? (
                   <div className="mt-3 rounded-lg bg-[#f7e9c9] p-3 text-xs text-[#946c22]">
-                    <b>Multa automática:</b> Hoje é dia {new Date().getDate()}. Como passou do dia 5,
-                    foi aplicada a multa de 1.000 Kz por atraso.
+                    <b>Multa automática por atraso:</b> Hoje é dia {new Date().getDate()}. O prazo regular terminou no dia 5,
+                    pelo que foi aplicada a multa de {Number(settings.latePenalty || 1000).toLocaleString('pt-AO')} Kz.
+                  </div>
+                ) : (
+                  <div className="mt-3 rounded-lg bg-emerald-50 border border-emerald-200/60 p-3 text-xs text-emerald-800">
+                    <b>Período Regular de Pagamento (Dias 1 a 5):</b> O cliente está dentro do prazo regulamentar para liquidar a mensalidade sem cobrança de multa.
                   </div>
                 )}
               </div>

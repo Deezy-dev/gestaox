@@ -1666,46 +1666,88 @@ const dueDayFor = (clientId: number) =>
   Number(contracts.find((item) => Number(item.clientId) === Number(clientId))?.dueDay ?? settings.paymentDueDay ?? 5);
 
 export const visibleClient = (client: AnyRecord): AnyRecord => {
-  if (client.status === 'inactive') return { ...client, status: 'inactive' };
+  if (client.status === 'inactive') return { ...client, status: 'inactive', penalty: 0 };
   
-  const last = latestPaymentFor(client.id);
   const currentMonth = monthKey();
   const currentDay = new Date().getDate();
-  const dueDay = dueDayFor(client.id);
+  const latePenaltyAmount = Number(settings.latePenalty ?? 1000); // Multa é de 1.000 Kz
 
-  let status = client.status || 'active';
+  const monthlyBase = Number(
+    client.monthlyFee ||
+    client.monthlyPrice ||
+    client.monthly_fee ||
+    (client.serviceType === 'tv' ? 4000 : client.serviceType === 'combo' ? 10500 : 6500)
+  );
+
+  // Soma todos os pagamentos efetuados pelo cliente para a competência do mês atual
+  const clientMonthPayments = payments.filter(
+    (item) =>
+      Number(item.clientId) === Number(client.id) &&
+      (item.paymentMonth === currentMonth ||
+        item.payment_month === currentMonth ||
+        item.referenceMonth === currentMonth ||
+        (item.paidAt && item.paidAt.slice(0, 7) === currentMonth)) &&
+      item.movementType !== 'adesao_contrato'
+  );
+
+  const totalPaidThisMonth = clientMonthPayments.reduce(
+    (sum, p) => sum + Number(p.amount || 0) + Number(p.penalty || 0),
+    0
+  );
+
+  // A multa de 1.000 Kz aplica-se a partir do dia 6 (dias 1 a 5 é período regular sem multa)
+  const penaltyApplies = currentDay >= 6 || clientMonthPayments.some((p) => Number(p.penalty || 0) > 0 || (p.paidAt && new Date(p.paidAt).getDate() >= 6));
+  const currentPenalty = penaltyApplies ? latePenaltyAmount : 0;
+  
+  // Total exigido para quitação integral: 4.000 Kz (dias 1 a 5) ou 4.000 + 1.000 = 5.000 Kz (a partir do dia 6)
+  const requiredTotal = monthlyBase + currentPenalty;
+
+  // REGRA DE NEGÓCIO OBRIGATÓRIA:
+  // O estado do cliente SÓ fica ATIVO quando o cliente paga a mensalidade na TOTALIDADE!
+  const isPaidInFull = totalPaidThisMonth >= requiredTotal;
 
   if (client.status === 'suspended') {
-    return { ...client, status: 'suspended' };
+    return {
+      ...client,
+      status: 'suspended',
+      isCurrentMonthPaid: isPaidInFull,
+      penalty: currentPenalty,
+      monthlyBase,
+      totalPaidThisMonth,
+      balanceDue: Math.max(0, requiredTotal - totalPaidThisMonth),
+    };
   }
 
-  if (last) {
-    const pMonth = last.paymentMonth || last.payment_month || last.referenceMonth || (last.paidAt ? last.paidAt.slice(0, 7) : '');
-    const elapsed = monthsSince(`${pMonth}-01`);
-    if (elapsed >= Number(settings.suspensionAfterMonths ?? 3)) {
-      status = 'suspended';
-    } else if (pMonth === currentMonth) {
-      status = 'active';
-    } else if (currentDay > dueDay) {
-      status = 'late';
-    } else {
-      status = 'active';
-    }
+  let status = client.status || 'active';
+  let penalty = 0;
+
+  if (isPaidInFull) {
+    status = 'active';
+    penalty = 0;
   } else {
-    // No payments yet recorded
-    const clientAgeMonths = monthsSince(client.createdAt || client.created_at);
-    if (clientAgeMonths === 0) {
-      status = client.status || 'active';
-    } else if (clientAgeMonths >= Number(settings.suspensionAfterMonths ?? 3)) {
-      status = 'suspended';
-    } else if (currentDay > dueDay && clientAgeMonths >= 1) {
+    // A partir do dia 1 do mês, quem ainda não pagou a totalidade fica 'late' (Em atraso)
+    const clientCreationMonth = (client.createdAt || client.created_at || '').slice(0, 7);
+    const isNewClientWithRemainingDays = clientCreationMonth === currentMonth && client.remainingDaysChoice === 'assistir_restantes';
+
+    if (!isNewClientWithRemainingDays) {
       status = 'late';
+      penalty = currentPenalty; // 0 nos dias 1 a 5; 1.000 Kz a partir do dia 6
     } else {
-      status = client.status || 'active';
+      status = 'active';
+      penalty = 0;
     }
   }
 
-  return { ...client, status };
+  return {
+    ...client,
+    status,
+    isCurrentMonthPaid: isPaidInFull,
+    penalty,
+    gracePeriodActive: !isPaidInFull && currentDay <= 5,
+    monthlyBase,
+    totalPaidThisMonth,
+    balanceDue: Math.max(0, requiredTotal - totalPaidThisMonth),
+  };
 };
 
 const isInRange = (value: string, start?: string, end?: string) =>
@@ -3170,12 +3212,16 @@ export const useCreatePayment = () =>
         const pMonth = p.paymentMonth || p.payment_month || p.referenceMonth || (p.paidAt ? p.paidAt.slice(0, 7) : '');
         return pClientId === clientIdNum && pMonth === paymentMonth && p.movementType !== 'adesao_contrato';
       })
-      .reduce((acc, p) => acc + Number(p.amount || 0), 0);
+      .reduce((acc, p) => acc + Number(p.amount || 0) + Number(p.penalty || 0), 0);
 
-    const totalAccumulatedForMonth = alreadyPaid + amount;
-    const isPartial = totalAccumulatedForMonth < expectedMonthly && totalAccumulatedForMonth > 0;
-    const remainingBalance = isPartial ? Math.max(0, expectedMonthly - totalAccumulatedForMonth) : 0;
     const totalReceived = amount + Number(penalty || 0);
+    const totalAccumulatedForMonth = alreadyPaid + totalReceived;
+
+    // Regra OSDEL: Multa de 1.000 Kz e ativação apenas com quitação total (4.000 ou 4.000 + 1.000 de multa)
+    const penaltyApplies = currentDay > dueDay || Number(penalty || 0) > 0;
+    const requiredTotalForMonth = expectedMonthly + (penaltyApplies ? Number(settings.latePenalty ?? 1000) : 0);
+    const isPartial = totalAccumulatedForMonth < requiredTotalForMonth;
+    const remainingBalance = isPartial ? Math.max(0, requiredTotalForMonth - totalAccumulatedForMonth) : 0;
 
     // Gestão de Tesouraria em Tempo Real: Determinar conta financeira de destino
     let targetAccId = data.accountId || data.account_id;

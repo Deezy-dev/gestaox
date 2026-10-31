@@ -180,6 +180,14 @@ export function ClientDetailPage() {
     content: '',
   });
 
+  const duplicateStatus = useMemo(() => {
+    return checkClientDuplicate({
+      fullName: editForm.fullName,
+      documentNumber: editForm.documentNumber,
+      excludeClientId: clientId,
+    });
+  }, [editForm.fullName, editForm.documentNumber, clientId]);
+
   if (clientQuery.isLoading) {
     return (
       <div className="p-12 text-center text-sm text-[hsl(var(--muted-foreground))]">
@@ -279,14 +287,6 @@ export function ClientDetailPage() {
       },
     );
   };
-
-  const duplicateStatus = useMemo(() => {
-    return checkClientDuplicate({
-      fullName: editForm.fullName,
-      documentNumber: editForm.documentNumber,
-      excludeClientId: clientId,
-    });
-  }, [editForm.fullName, editForm.documentNumber, clientId]);
 
   const handleUpdate = (e: FormEvent) => {
     e.preventDefault();
@@ -427,7 +427,7 @@ export function ClientDetailPage() {
                 const defaultFee = client.monthlyFee || client.monthlyPrice || (client.serviceType === 'tv' ? 4000 : client.serviceType === 'combo' ? 10500 : 6500);
                 setPayForm({
                   amount: String(defaultFee),
-                  penalty: client.status === 'late' ? String(settings.latePenalty || 1000) : '0',
+                  penalty: (client.status === 'late' || client.status === 'suspended') && new Date().getDate() >= 6 ? String(settings.latePenalty || 1000) : '0',
                   referenceMonth: new Date().toISOString().slice(0, 7),
                   method: 'Multicaixa Express',
                   paidAt: new Date().toISOString().slice(0, 10),
@@ -658,7 +658,7 @@ export function ClientDetailPage() {
                 const defaultFee = client.monthlyFee || client.monthlyPrice || (client.serviceType === 'tv' ? 4000 : client.serviceType === 'combo' ? 10500 : 6500);
                 setPayForm({
                   amount: String(defaultFee),
-                  penalty: client.status === 'late' ? String(settings.latePenalty || 1000) : '0',
+                  penalty: (client.status === 'late' || client.status === 'suspended') && new Date().getDate() >= 6 ? String(settings.latePenalty || 1000) : '0',
                   referenceMonth: new Date().toISOString().slice(0, 7),
                   method: 'Multicaixa Express',
                   paidAt: new Date().toISOString().slice(0, 10),

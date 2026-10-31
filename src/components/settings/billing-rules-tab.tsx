@@ -56,7 +56,7 @@ export function BillingRulesTab({ form, set, isAdmin }: BillingRulesTabProps) {
             />
           </Field>
 
-          <Field label="Multa Fixa por Atraso (Kz)" hint="Aplicada após expirar a tolerância">
+          <Field label="Multa Fixa por Atraso (Kz)" hint="Aplicada a partir do dia 6 (dias 1 a 5 sem multa)">
             <Input
               type="number"
               min="0"

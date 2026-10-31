@@ -13,7 +13,7 @@ const STORAGE_KEY_API_MODE = 'osdel_api_mode';
 // URL padrão da API oficial do PythonAnywhere
 export const DEFAULT_API_URL =
   (typeof import.meta !== 'undefined' && import.meta.env?.VITE_API_BASE_URL) ||
-  'https://tecnologiaosdel.pythonanywhere.com';
+  'https://osdelltecnologia.pythonanywhere.com';
 export const API_BASE_URL = DEFAULT_API_URL;
 
 export type ApiMode = 'local_offline' | 'remote_hybrid' | 'production_api';

@@ -10,7 +10,7 @@ As variáveis do frontend devem sempre possuir o prefixo `VITE_` para que o empa
 
 | Variável | Exemplo de Valor | Obrigatória? | Descrição |
 | :--- | :--- | :--- | :--- |
-| `VITE_API_BASE_URL` | `https://tecnologiaosdel.pythonanywhere.com` | **Sim** | URL base da API REST para requisições HTTP |
+| `VITE_API_BASE_URL` | `https://osdelltecnologia.pythonanywhere.com` | **Sim** | URL base da API REST para requisições HTTP |
 | `VITE_APP_NAME` | `Gestão X` | Não | Nome exibido na barra de título e ecrãs |
 | `VITE_COMPANY_NAME` | `OSDEL TECNOLOGIA` | Não | Nome da empresa exibido em cabeçalhos |
 | `VITE_DEFAULT_SERVICE_MODE` | `combo` | Não | Modalidade inicial (`fibra`, `tv` ou `combo`) |

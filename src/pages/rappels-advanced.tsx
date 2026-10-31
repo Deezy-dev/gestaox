@@ -118,36 +118,42 @@ export function RappelsPage() {
     setTimeout(() => setToastMsg(null), 4500);
   };
 
-  // Find who has paid for the current month
-  const currentPaidClients = useMemo(() => {
-    return new Set(
-      payments
-        .filter((p) => (p.referenceMonth || p.paidAt.slice(0, 7)) === currentMonth)
-        .map((p) => p.clientId),
-    );
+  // Mapa de pagamentos acumulados do cliente no mês corrente
+  const currentMonthPaymentsMap = useMemo(() => {
+    const map = new Map<number, number>();
+    payments
+      .filter((p) => (p.referenceMonth || p.paidAt?.slice(0, 7)) === currentMonth && p.movementType !== 'adesao_contrato')
+      .forEach((p) => {
+        const cId = Number(p.clientId || p.client_id);
+        const amount = Number(p.amount || 0) + Number(p.penalty || 0);
+        map.set(cId, (map.get(cId) || 0) + amount);
+      });
+    return map;
   }, [payments, currentMonth]);
 
-  // Enriched unpaid clients list
+  // Lista enriquecida de clientes com pagamentos em atraso ou parciais:
+  // O cliente só é considerado quitado quando paga a mensalidade NA TOTALIDADE (4000 ou 4000 + 1000 de multa)
   const enrichedUnpaid = useMemo(() => {
     return clients
-      .filter((c) => c.status === 'late' || c.status === 'suspended' || !currentPaidClients.has(c.id))
       .map((c) => {
-        const isPaid = currentPaidClients.has(c.id);
-        const isLate = c.status === 'late' || (!isPaid && todayDay > (settings.paymentDueDay || 5));
-        const penaltyFee = isLate ? Number(settings.latePenalty || settings.penaltyAmount || 1500) : 0;
-        const totalDebt = Number(c.monthlyFee || c.monthlyPrice || 8500) + penaltyFee;
+        const totalPaidSoFar = currentMonthPaymentsMap.get(Number(c.id)) || 0;
+        const monthlyBase = Number(c.monthlyFee || c.monthlyPrice || (c.serviceType === 'tv' ? 4000 : c.serviceType === 'combo' ? 10500 : 6500));
+        // A multa de 1.000 Kz aplica-se a partir do dia 6
+        const penaltyFee = todayDay >= 6 ? Number(settings.latePenalty ?? 1000) : 0;
+        const requiredTotal = monthlyBase + penaltyFee;
+        const isPaidInFull = totalPaidSoFar >= requiredTotal;
+        const remainingDebt = Math.max(0, requiredTotal - totalPaidSoFar);
 
-        // Determine Rappel Severity Level:
-        // Level 1: 5 to 10 days late (friendly reminder)
-        // Level 2: 11 to 20 days late (pre-cut warning, 48h limit)
-        // Level 3: > 20 days late or already flagged suspended
+        // Determina o Nível de Rappel:
         let rappelLevel: 'rappel1' | 'rappel2' | 'rappel3' | 'suspenso' = 'rappel1';
         if (c.status === 'suspended') {
           rappelLevel = 'suspenso';
         } else if (todayDay > 20 || (c.status === 'late' && todayDay > 15)) {
           rappelLevel = 'rappel3';
-        } else if (todayDay > 10 || c.status === 'late') {
+        } else if (todayDay > 10) {
           rappelLevel = 'rappel2';
+        } else {
+          rappelLevel = 'rappel1';
         }
 
         const hasActivePromise =
@@ -155,14 +161,19 @@ export function RappelsPage() {
 
         return {
           ...c,
-          isLate,
+          isPaidInFull,
+          isLate: !isPaidInFull,
           penaltyFee,
-          totalDebt,
+          totalDebt: remainingDebt,
+          monthlyBase,
+          totalPaidSoFar,
           rappelLevel,
           hasActivePromise,
+          isGracePeriod: !isPaidInFull && todayDay <= 5,
         };
-      });
-  }, [clients, currentPaidClients, todayDay, settings]);
+      })
+      .filter((c) => !c.isPaidInFull || c.status === 'suspended' || c.status === 'late');
+  }, [clients, currentMonthPaymentsMap, todayDay, settings]);
 
   // Unique PDOs and Neighborhoods for filtering
   const allPdos = useMemo(() => {

@@ -521,7 +521,8 @@ export function ReportsAdvancedPage() {
       if (c.status === 'active') map[pdo].active += 1;
       else if (c.status === 'late') {
         map[pdo].late += 1;
-        map[pdo].debtSum += Number(c.monthlyFee || 8500) + 1500;
+        const penalty = new Date().getDate() >= 6 ? (Number(settings.latePenalty) || 1000) : 0;
+        map[pdo].debtSum += Number(c.monthlyFee || 8500) + penalty;
       } else if (c.status === 'suspended') {
         map[pdo].suspended += 1;
         map[pdo].debtSum += Number(c.monthlyFee || 8500) * 2;
