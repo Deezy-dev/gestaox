@@ -1,0 +1,87 @@
+# ==============================================================================
+# GESTÃO X · OSDEL TECNOLOGIA - .gitignore OFICIAL PARA GITHUB E PRODUÇÃO
+# ==============================================================================
+
+# --- Node & NPM ---
+node_modules/
+.pnp
+.pnp.js
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# --- Compilações e Builds Web ---
+dist/
+dist-ssr/
+build/
+out/
+.next/
+coverage/
+
+# --- Caches e Arquivos Temporários de Ferramentas ---
+.cache/
+.vite/
+.parcel-cache/
+*.tmp
+*.temp
+*.bak
+
+# --- Electron Desktop Builds & Unpacked Runtimes ---
+electron_app/dist/
+electron_app/dist_*/
+electron_app/dist_fibra_exe/
+electron_app/dist_tv_exe/
+*.exe
+*.dmg
+*.AppImage
+*.deb
+
+# --- Android / Capacitor Builds e Caches Gradle ---
+**/android/.gradle/
+**/android/app/build/
+**/android/build/
+**/android/.idea/
+*.apk
+*.aab
+*.keystore
+
+# --- Python Backend (PythonAnywhere / Local) ---
+**/__pycache__/
+*.py[cod]
+*$py.class
+*.db
+*.sqlite
+*.sqlite3
+venv/
+.venv/
+env/
+ENV/
+
+# --- Pacotes e Binários Compactados Pesados ---
+*.zip
+*.tar.gz
+public/assets/aistudio/*.zip
+public/downloads/*.zip
+public/downloads/*.exe
+public/downloads/*.apk
+
+# --- Variáveis de Ambiente e Segredos ---
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+!.env.example
+backend_api/.env
+gestaox/backend/.env
+
+# --- Sistema Operacional e IDEs ---
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp
+*.swo

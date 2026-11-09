@@ -1,0 +1,15 @@
+node_modules
+dist
+.git
+.github
+.vscode
+*.log
+npm-debug.log*
+.DS_Store
+attached_assets
+clienteapk/android/.gradle
+clienteapk/android/app/build
+equipaapk/android/.gradle
+equipaapk/android/app/build
+electron_app/dist*
+electron_app/node_modules

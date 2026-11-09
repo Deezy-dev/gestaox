@@ -1,0 +1,27 @@
+{
+  "appId": "ao.osdel.tvcabo.desktop",
+  "productName": "OSDEL Gestão - TV Cabo Desktop",
+  "copyright": "Copyright © 2026 OSDEL TECNOLOGIA",
+  "directories": {
+    "output": "dist_tv_exe"
+  },
+  "electronVersion": "29.1.5",
+  "extraMetadata": {
+    "main": "main_tv.js"
+  },
+  "artifactName": "OSDEL_TV_Cabo_Desktop_Setup_${version}.${ext}",
+  "win": {
+    "target": "dir",
+    "icon": "assets/icon.ico"
+  },
+  "files": [
+    "main_tv.js",
+    "main.js",
+    "preload.js",
+    "index.html",
+    "css/**/*",
+    "js/**/*",
+    "assets/**/*",
+    "dist/**/*"
+  ]
+}

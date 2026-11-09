@@ -1,0 +1,8 @@
+{
+  "name": "Gestaox",
+  "description": "Discuss and analyze your project goals with an AI partner before taking any action.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

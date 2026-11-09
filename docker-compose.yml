@@ -1,0 +1,26 @@
+# ==============================================================================
+# OSDEL GESTÃO X - DOCKER COMPOSE PARA PRODUÇÃO / HOSPEDAGEM
+# ==============================================================================
+services:
+  gestao-x-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: osdel_gestao_x
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - SUPABASE_URL=${SUPABASE_URL:-}
+      - SUPABASE_ANON_KEY=${SUPABASE_ANON_KEY:-}
+      - SUPABASE_SERVICE_ROLE_KEY=${SUPABASE_SERVICE_ROLE_KEY:-}
+      - JWT_SECRET=${JWT_SECRET:-osdel-production-jwt-secret-super-safe-2026}
+      - ALLOWED_ORIGINS=${ALLOWED_ORIGINS:-*}
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:3000/api/v1/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 5s

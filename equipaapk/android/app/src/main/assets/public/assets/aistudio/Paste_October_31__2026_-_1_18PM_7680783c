@@ -1,0 +1,612 @@
+2026-10-31 12:13:55,381: Error running WSGI application
+2026-10-31 12:13:55,391: ModuleNotFoundError: No module named 'flask_cors'
+2026-10-31 12:13:55,391:   File "/var/www/osdelltecnologia_pythonanywhere_com_wsgi.py", line 8, in <module>
+2026-10-31 12:13:55,392:     from app import app as application
+2026-10-31 12:13:55,392: 
+2026-10-31 12:13:55,392:   File "/home/osdelltecnologia/backend_api/app.py", line 3, in <module>
+2026-10-31 12:13:55,392:     from flask_cors import CORS
+2026-10-31 12:13:55,392: ***************************************************
+2026-10-31 12:13:55,392: If you're seeing an import error and don't know why,
+2026-10-31 12:13:55,392: we have a dedicated help page to help you debug: 
+2026-10-31 12:13:55,392: https://help.pythonanywhere.com/pages/DebuggingImportError/
+2026-10-31 12:13:55,393: ***************************************************
+2026-10-31 12:13:55,815: Error running WSGI application
+2026-10-31 12:13:55,815: ModuleNotFoundError: No module named 'flask_cors'
+2026-10-31 12:13:55,816:   File "/var/www/osdelltecnologia_pythonanywhere_com_wsgi.py", line 8, in <module>
+2026-10-31 12:13:55,816:     from app import app as application
+2026-10-31 12:13:55,816: 
+2026-10-31 12:13:55,816:   File "/home/osdelltecnologia/backend_api/app.py", line 3, in <module>
+2026-10-31 12:13:55,816:     from flask_cors import CORS
+2026-10-31 12:13:55,816: ***************************************************
+2026-10-31 12:13:55,816: If you're seeing an import error and don't know why,
+2026-10-31 12:13:55,817: we have a dedicated help page to help you debug: 
+2026-10-31 12:13:55,817: https://help.pythonanywhere.com/pages/DebuggingImportError/
+2026-10-31 12:13:55,817: ***************************************************
+2026-10-31 12:14:01,382: Error running WSGI application
+2026-10-31 12:14:01,385: ModuleNotFoundError: No module named 'flask_cors'
+2026-10-31 12:14:01,385:   File "/var/www/osdelltecnologia_pythonanywhere_com_wsgi.py", line 8, in <module>
+2026-10-31 12:14:01,389:     from app import app as application
+2026-10-31 12:14:01,389: 
+2026-10-31 12:14:01,389:   File "/home/osdelltecnologia/backend_api/app.py", line 3, in <module>
+2026-10-31 12:14:01,390:     from flask_cors import CORS
+2026-10-31 12:14:01,393: ***************************************************
+2026-10-31 12:14:01,393: If you're seeing an import error and don't know why,
+2026-10-31 12:14:01,394: we have a dedicated help page to help you debug: 
+2026-10-31 12:14:01,394: https://help.pythonanywhere.com/pages/DebuggingImportError/
+2026-10-31 12:14:01,394: ***************************************************
+2026-10-31 12:14:01,877: Error running WSGI application
+2026-10-31 12:14:01,883: ModuleNotFoundError: No module named 'flask_cors'
+2026-10-31 12:14:01,883:   File "/var/www/osdelltecnologia_pythonanywhere_com_wsgi.py", line 8, in <module>
+2026-10-31 12:14:01,883:     from app import app as application
+2026-10-31 12:14:01,883: 
+2026-10-31 12:14:01,883:   File "/home/osdelltecnologia/backend_api/app.py", line 3, in <module>
+2026-10-31 12:14:01,884:     from flask_cors import CORS
+2026-10-31 12:14:01,884: ***************************************************
+2026-10-31 12:14:01,884: If you're seeing an import error and don't know why,
+2026-10-31 12:14:01,884: we have a dedicated help page to help you debug: 
+2026-10-31 12:14:01,884: https://help.pythonanywhere.com/pages/DebuggingImportError/
+2026-10-31 12:14:01,884: ***************************************************
+2026-10-31 12:14:11,372: Error running WSGI application
+2026-10-31 12:14:11,378: ModuleNotFoundError: No module named 'flask_cors'
+2026-10-31 12:14:11,378:   File "/var/www/osdelltecnologia_pythonanywhere_com_wsgi.py", line 8, in <module>
+2026-10-31 12:14:11,378:     from app import app as application
+2026-10-31 12:14:11,378: 
+2026-10-31 12:14:11,379:   File "/home/osdelltecnologia/backend_api/app.py", line 3, in <module>
+2026-10-31 12:14:11,379:     from flask_cors import CORS
+2026-10-31 12:14:11,379: ***************************************************
+2026-10-31 12:14:11,379: If you're seeing an import error and don't know why,
+2026-10-31 12:14:11,379: we have a dedicated help page to help you debug: 
+2026-10-31 12:14:11,379: https://help.pythonanywhere.com/pages/DebuggingImportError/
+2026-10-31 12:14:11,379: ***************************************************
+2026-10-31 12:14:11,794: Error running WSGI application
+2026-10-31 12:14:11,795: ModuleNotFoundError: No module named 'flask_cors'
+2026-10-31 12:14:11,795:   File "/var/www/osdelltecnologia_pythonanywhere_com_wsgi.py", line 8, in <module>
+2026-10-31 12:14:11,796:     from app import app as application
+2026-10-31 12:14:11,796: 
+2026-10-31 12:14:11,796:   File "/home/osdelltecnologia/backend_api/app.py", line 3, in <module>
+2026-10-31 12:14:11,796:     from flask_cors import CORS
+2026-10-31 12:14:11,796: ***************************************************
+2026-10-31 12:14:11,796: If you're seeing an import error and don't know why,
+2026-10-31 12:14:11,796: we have a dedicated help page to help you debug: 
+2026-10-31 12:14:11,798: https://help.pythonanywhere.com/pages/DebuggingImportError/
+2026-10-31 12:14:11,798: ***************************************************
+2026-10-31 12:14:21,368: Error running WSGI application
+2026-10-31 12:14:21,368: ModuleNotFoundError: No module named 'flask_cors'
+2026-10-31 12:14:21,368:   File "/var/www/osdelltecnologia_pythonanywhere_com_wsgi.py", line 8, in <module>
+2026-10-31 12:14:21,368:     from app import app as application
+2026-10-31 12:14:21,369: 
+2026-10-31 12:14:21,369:   File "/home/osdelltecnologia/backend_api/app.py", line 3, in <module>
+2026-10-31 12:14:21,369:     from flask_cors import CORS
+2026-10-31 12:14:21,369: ***************************************************
+2026-10-31 12:14:21,370: If you're seeing an import error and don't know why,
+2026-10-31 12:14:21,371: we have a dedicated help page to help you debug: 
+2026-10-31 12:14:21,371: https://help.pythonanywhere.com/pages/DebuggingImportError/
+2026-10-31 12:14:21,371: ***************************************************
+2026-10-31 12:14:21,778: Error running WSGI application
+2026-10-31 12:14:21,778: ModuleNotFoundError: No module named 'flask_cors'
+2026-10-31 12:14:21,778:   File "/var/www/osdelltecnologia_pythonanywhere_com_wsgi.py", line 8, in <module>
+2026-10-31 12:14:21,778:     from app import app as application
+2026-10-31 12:14:21,778: 
+2026-10-31 12:14:21,779:   File "/home/osdelltecnologia/backend_api/app.py", line 3, in <module>
+2026-10-31 12:14:21,779:     from flask_cors import CORS
+2026-10-31 12:14:21,779: ***************************************************
+2026-10-31 12:14:21,779: If you're seeing an import error and don't know why,
+2026-10-31 12:14:21,779: we have a dedicated help page to help you debug: 
+2026-10-31 12:14:21,779: https://help.pythonanywhere.com/pages/DebuggingImportError/
+2026-10-31 12:14:21,779: ***************************************************
+2026-10-31 12:14:23,048: Error running WSGI application
+2026-10-31 12:14:23,048: ModuleNotFoundError: No module named 'flask_cors'
+2026-10-31 12:14:23,048:   File "/var/www/osdelltecnologia_pythonanywhere_com_wsgi.py", line 8, in <module>
+2026-10-31 12:14:23,049:     from app import app as application
+2026-10-31 12:14:23,049: 
+2026-10-31 12:14:23,049:   File "/home/osdelltecnologia/backend_api/app.py", line 3, in <module>
+2026-10-31 12:14:23,049:     from flask_cors import CORS
+2026-10-31 12:14:23,049: ***************************************************
+2026-10-31 12:14:23,049: If you're seeing an import error and don't know why,
+2026-10-31 12:14:23,049: we have a dedicated help page to help you debug: 
+2026-10-31 12:14:23,050: https://help.pythonanywhere.com/pages/DebuggingImportError/
+2026-10-31 12:14:23,050: ***************************************************
+2026-10-31 12:14:23,482: Error running WSGI application
+2026-10-31 12:14:23,483: ModuleNotFoundError: No module named 'flask_cors'
+2026-10-31 12:14:23,484:   File "/var/www/osdelltecnologia_pythonanywhere_com_wsgi.py", line 8, in <module>
+2026-10-31 12:14:23,484:     from app import app as application
+2026-10-31 12:14:23,484: 
+2026-10-31 12:14:23,484:   File "/home/osdelltecnologia/backend_api/app.py", line 3, in <module>
+2026-10-31 12:14:23,484:     from flask_cors import CORS
+2026-10-31 12:14:23,484: ***************************************************
+2026-10-31 12:14:23,484: If you're seeing an import error and don't know why,
+2026-10-31 12:14:23,485: we have a dedicated help page to help you debug: 
+2026-10-31 12:14:23,485: https://help.pythonanywhere.com/pages/DebuggingImportError/
+2026-10-31 12:14:23,485: ***************************************************
+2026-10-31 12:14:31,365: Error running WSGI application
+2026-10-31 12:14:31,366: ModuleNotFoundError: No module named 'flask_cors'
+2026-10-31 12:14:31,366:   File "/var/www/osdelltecnologia_pythonanywhere_com_wsgi.py", line 8, in <module>
+2026-10-31 12:14:31,366:     from app import app as application
+2026-10-31 12:14:31,366: 
+2026-10-31 12:14:31,366:   File "/home/osdelltecnologia/backend_api/app.py", line 3, in <module>
+2026-10-31 12:14:31,366:     from flask_cors import CORS
+2026-10-31 12:14:31,366: ***************************************************
+2026-10-31 12:14:31,366: If you're seeing an import error and don't know why,
+2026-10-31 12:14:31,367: we have a dedicated help page to help you debug: 
+2026-10-31 12:14:31,367: https://help.pythonanywhere.com/pages/DebuggingImportError/
+2026-10-31 12:14:31,367: ***************************************************
+2026-10-31 12:14:31,771: Error running WSGI application
+2026-10-31 12:14:31,772: ModuleNotFoundError: No module named 'flask_cors'
+2026-10-31 12:14:31,772:   File "/var/www/osdelltecnologia_pythonanywhere_com_wsgi.py", line 8, in <module>
+2026-10-31 12:14:31,772:     from app import app as application
+2026-10-31 12:14:31,772: 
+2026-10-31 12:14:31,772:   File "/home/osdelltecnologia/backend_api/app.py", line 3, in <module>
+2026-10-31 12:14:31,773:     from flask_cors import CORS
+2026-10-31 12:14:31,773: ***************************************************
+2026-10-31 12:14:31,773: If you're seeing an import error and don't know why,
+2026-10-31 12:14:31,773: we have a dedicated help page to help you debug: 
+2026-10-31 12:14:31,773: https://help.pythonanywhere.com/pages/DebuggingImportError/
+2026-10-31 12:14:31,773: ***************************************************
+2026-10-31 12:14:35,331: Error running WSGI application
+2026-10-31 12:14:35,332: ModuleNotFoundError: No module named 'flask_cors'
+2026-10-31 12:14:35,332:   File "/var/www/osdelltecnologia_pythonanywhere_com_wsgi.py", line 8, in <module>
+2026-10-31 12:14:35,332:     from app import app as application
+2026-10-31 12:14:35,332: 
+2026-10-31 12:14:35,333:   File "/home/osdelltecnologia/backend_api/app.py", line 3, in <module>
+2026-10-31 12:14:35,333:     from flask_cors import CORS
+2026-10-31 12:14:35,333: ***************************************************
+2026-10-31 12:14:35,333: If you're seeing an import error and don't know why,
+2026-10-31 12:14:35,333: we have a dedicated help page to help you debug: 
+2026-10-31 12:14:35,333: https://help.pythonanywhere.com/pages/DebuggingImportError/
+2026-10-31 12:14:35,333: ***************************************************
+2026-10-31 12:14:35,761: Error running WSGI application
+2026-10-31 12:14:35,762: ModuleNotFoundError: No module named 'flask_cors'
+2026-10-31 12:14:35,762:   File "/var/www/osdelltecnologia_pythonanywhere_com_wsgi.py", line 8, in <module>
+2026-10-31 12:14:35,762:     from app import app as application
+2026-10-31 12:14:35,762: 
+2026-10-31 12:14:35,762:   File "/home/osdelltecnologia/backend_api/app.py", line 3, in <module>
+2026-10-31 12:14:35,763:     from flask_cors import CORS
+2026-10-31 12:14:35,763: ***************************************************
+2026-10-31 12:14:35,763: If you're seeing an import error and don't know why,
+2026-10-31 12:14:35,764: we have a dedicated help page to help you debug: 
+2026-10-31 12:14:35,765: https://help.pythonanywhere.com/pages/DebuggingImportError/
+2026-10-31 12:14:35,765: ***************************************************
+2026-10-31 12:14:36,798: Error running WSGI application
+2026-10-31 12:14:36,799: ModuleNotFoundError: No module named 'flask_cors'
+2026-10-31 12:14:36,799:   File "/var/www/osdelltecnologia_pythonanywhere_com_wsgi.py", line 8, in <module>
+2026-10-31 12:14:36,799:     from app import app as application
+2026-10-31 12:14:36,799: 
+2026-10-31 12:14:36,799:   File "/home/osdelltecnologia/backend_api/app.py", line 3, in <module>
+2026-10-31 12:14:36,799:     from flask_cors import CORS
+2026-10-31 12:14:36,799: ***************************************************
+2026-10-31 12:14:36,800: If you're seeing an import error and don't know why,
+2026-10-31 12:14:36,800: we have a dedicated help page to help you debug: 
+2026-10-31 12:14:36,800: https://help.pythonanywhere.com/pages/DebuggingImportError/
+2026-10-31 12:14:36,800: ***************************************************
+2026-10-31 12:14:37,210: Error running WSGI application
+2026-10-31 12:14:37,211: ModuleNotFoundError: No module named 'flask_cors'
+2026-10-31 12:14:37,211:   File "/var/www/osdelltecnologia_pythonanywhere_com_wsgi.py", line 8, in <module>
+2026-10-31 12:14:37,211:     from app import app as application
+2026-10-31 12:14:37,212: 
+2026-10-31 12:14:37,212:   File "/home/osdelltecnologia/backend_api/app.py", line 3, in <module>
+2026-10-31 12:14:37,212:     from flask_cors import CORS
+2026-10-31 12:14:37,212: ***************************************************
+2026-10-31 12:14:37,212: If you're seeing an import error and don't know why,
+2026-10-31 12:14:37,212: we have a dedicated help page to help you debug: 
+2026-10-31 12:14:37,212: https://help.pythonanywhere.com/pages/DebuggingImportError/
+2026-10-31 12:14:37,213: ***************************************************
+2026-10-31 12:14:39,640: Error running WSGI application
+2026-10-31 12:14:39,640: ModuleNotFoundError: No module named 'flask_cors'
+2026-10-31 12:14:39,640:   File "/var/www/osdelltecnologia_pythonanywhere_com_wsgi.py", line 8, in <module>
+2026-10-31 12:14:39,641:     from app import app as application
+2026-10-31 12:14:39,641: 
+2026-10-31 12:14:39,641:   File "/home/osdelltecnologia/backend_api/app.py", line 3, in <module>
+2026-10-31 12:14:39,641:     from flask_cors import CORS
+2026-10-31 12:14:39,641: ***************************************************
+2026-10-31 12:14:39,641: If you're seeing an import error and don't know why,
+2026-10-31 12:14:39,641: we have a dedicated help page to help you debug: 
+2026-10-31 12:14:39,641: https://help.pythonanywhere.com/pages/DebuggingImportError/
+2026-10-31 12:14:39,641: ***************************************************
+2026-10-31 12:14:40,059: Error running WSGI application
+2026-10-31 12:14:40,059: ModuleNotFoundError: No module named 'flask_cors'
+2026-10-31 12:14:40,059:   File "/var/www/osdelltecnologia_pythonanywhere_com_wsgi.py", line 8, in <module>
+2026-10-31 12:14:40,060:     from app import app as application
+2026-10-31 12:14:40,060: 
+2026-10-31 12:14:40,060:   File "/home/osdelltecnologia/backend_api/app.py", line 3, in <module>
+2026-10-31 12:14:40,060:     from flask_cors import CORS
+2026-10-31 12:14:40,060: ***************************************************
+2026-10-31 12:14:40,060: If you're seeing an import error and don't know why,
+2026-10-31 12:14:40,060: we have a dedicated help page to help you debug: 
+2026-10-31 12:14:40,060: https://help.pythonanywhere.com/pages/DebuggingImportError/
+2026-10-31 12:14:40,060: ***************************************************
+2026-10-31 12:14:40,952: Error running WSGI application
+2026-10-31 12:14:40,952: ModuleNotFoundError: No module named 'flask_cors'
+2026-10-31 12:14:40,953:   File "/var/www/osdelltecnologia_pythonanywhere_com_wsgi.py", line 8, in <module>
+2026-10-31 12:14:40,953:     from app import app as application
+2026-10-31 12:14:40,953: 
+2026-10-31 12:14:40,953:   File "/home/osdelltecnologia/backend_api/app.py", line 3, in <module>
+2026-10-31 12:14:40,953:     from flask_cors import CORS
+2026-10-31 12:14:40,953: ***************************************************
+2026-10-31 12:14:40,953: If you're seeing an import error and don't know why,
+2026-10-31 12:14:40,953: we have a dedicated help page to help you debug: 
+2026-10-31 12:14:40,953: https://help.pythonanywhere.com/pages/DebuggingImportError/
+2026-10-31 12:14:40,953: ***************************************************
+2026-10-31 12:14:41,367: Error running WSGI application
+2026-10-31 12:14:41,368: ModuleNotFoundError: No module named 'flask_cors'
+2026-10-31 12:14:41,368:   File "/var/www/osdelltecnologia_pythonanywhere_com_wsgi.py", line 8, in <module>
+2026-10-31 12:14:41,368:     from app import app as application
+2026-10-31 12:14:41,369: 
+2026-10-31 12:14:41,369:   File "/home/osdelltecnologia/backend_api/app.py", line 3, in <module>
+2026-10-31 12:14:41,369:     from flask_cors import CORS
+2026-10-31 12:14:41,369: ***************************************************
+2026-10-31 12:14:41,370: If you're seeing an import error and don't know why,
+2026-10-31 12:14:41,370: we have a dedicated help page to help you debug: 
+2026-10-31 12:14:41,371: https://help.pythonanywhere.com/pages/DebuggingImportError/
+2026-10-31 12:14:41,372: ***************************************************
+2026-10-31 12:14:42,937: Error running WSGI application
+2026-10-31 12:14:42,938: ModuleNotFoundError: No module named 'flask_cors'
+2026-10-31 12:14:42,938:   File "/var/www/osdelltecnologia_pythonanywhere_com_wsgi.py", line 8, in <module>
+2026-10-31 12:14:42,938:     from app import app as application
+2026-10-31 12:14:42,938: 
+2026-10-31 12:14:42,938:   File "/home/osdelltecnologia/backend_api/app.py", line 3, in <module>
+2026-10-31 12:14:42,938:     from flask_cors import CORS
+2026-10-31 12:14:42,938: ***************************************************
+2026-10-31 12:14:42,938: If you're seeing an import error and don't know why,
+2026-10-31 12:14:42,939: we have a dedicated help page to help you debug: 
+2026-10-31 12:14:42,939: https://help.pythonanywhere.com/pages/DebuggingImportError/
+2026-10-31 12:14:42,939: ***************************************************
+2026-10-31 12:14:43,349: Error running WSGI application
+2026-10-31 12:14:43,350: ModuleNotFoundError: No module named 'flask_cors'
+2026-10-31 12:14:43,350:   File "/var/www/osdelltecnologia_pythonanywhere_com_wsgi.py", line 8, in <module>
+2026-10-31 12:14:43,350:     from app import app as application
+2026-10-31 12:14:43,350: 
+2026-10-31 12:14:43,350:   File "/home/osdelltecnologia/backend_api/app.py", line 3, in <module>
+2026-10-31 12:14:43,350:     from flask_cors import CORS
+2026-10-31 12:14:43,350: ***************************************************
+2026-10-31 12:14:43,350: If you're seeing an import error and don't know why,
+2026-10-31 12:14:43,351: we have a dedicated help page to help you debug: 
+2026-10-31 12:14:43,351: https://help.pythonanywhere.com/pages/DebuggingImportError/
+2026-10-31 12:14:43,351: ***************************************************
+2026-10-31 12:14:44,945: Error running WSGI application
+2026-10-31 12:14:44,946: ModuleNotFoundError: No module named 'flask_cors'
+2026-10-31 12:14:44,946:   File "/var/www/osdelltecnologia_pythonanywhere_com_wsgi.py", line 8, in <module>
+2026-10-31 12:14:44,946:     from app import app as application
+2026-10-31 12:14:44,946: 
+2026-10-31 12:14:44,946:   File "/home/osdelltecnologia/backend_api/app.py", line 3, in <module>
+2026-10-31 12:14:44,947:     from flask_cors import CORS
+2026-10-31 12:14:44,947: ***************************************************
+2026-10-31 12:14:44,947: If you're seeing an import error and don't know why,
+2026-10-31 12:14:44,947: we have a dedicated help page to help you debug: 
+2026-10-31 12:14:44,947: https://help.pythonanywhere.com/pages/DebuggingImportError/
+2026-10-31 12:14:44,947: ***************************************************
+2026-10-31 12:14:45,369: Error running WSGI application
+2026-10-31 12:14:45,370: ModuleNotFoundError: No module named 'flask_cors'
+2026-10-31 12:14:45,370:   File "/var/www/osdelltecnologia_pythonanywhere_com_wsgi.py", line 8, in <module>
+2026-10-31 12:14:45,370:     from app import app as application
+2026-10-31 12:14:45,370: 
+2026-10-31 12:14:45,371:   File "/home/osdelltecnologia/backend_api/app.py", line 3, in <module>
+2026-10-31 12:14:45,371:     from flask_cors import CORS
+2026-10-31 12:14:45,371: ***************************************************
+2026-10-31 12:14:45,371: If you're seeing an import error and don't know why,
+2026-10-31 12:14:45,371: we have a dedicated help page to help you debug: 
+2026-10-31 12:14:45,371: https://help.pythonanywhere.com/pages/DebuggingImportError/
+2026-10-31 12:14:45,371: ***************************************************
+2026-10-31 12:14:46,935: Error running WSGI application
+2026-10-31 12:14:46,936: ModuleNotFoundError: No module named 'flask_cors'
+2026-10-31 12:14:46,936:   File "/var/www/osdelltecnologia_pythonanywhere_com_wsgi.py", line 8, in <module>
+2026-10-31 12:14:46,936:     from app import app as application
+2026-10-31 12:14:46,937: 
+2026-10-31 12:14:46,937:   File "/home/osdelltecnologia/backend_api/app.py", line 3, in <module>
+2026-10-31 12:14:46,937:     from flask_cors import CORS
+2026-10-31 12:14:46,937: ***************************************************
+2026-10-31 12:14:46,938: If you're seeing an import error and don't know why,
+2026-10-31 12:14:46,938: we have a dedicated help page to help you debug: 
+2026-10-31 12:14:46,938: https://help.pythonanywhere.com/pages/DebuggingImportError/
+2026-10-31 12:14:46,938: ***************************************************
+2026-10-31 12:14:47,346: Error running WSGI application
+2026-10-31 12:14:47,347: ModuleNotFoundError: No module named 'flask_cors'
+2026-10-31 12:14:47,347:   File "/var/www/osdelltecnologia_pythonanywhere_com_wsgi.py", line 8, in <module>
+2026-10-31 12:14:47,347:     from app import app as application
+2026-10-31 12:14:47,347: 
+2026-10-31 12:14:47,347:   File "/home/osdelltecnologia/backend_api/app.py", line 3, in <module>
+2026-10-31 12:14:47,348:     from flask_cors import CORS
+2026-10-31 12:14:47,348: ***************************************************
+2026-10-31 12:14:47,348: If you're seeing an import error and don't know why,
+2026-10-31 12:14:47,348: we have a dedicated help page to help you debug: 
+2026-10-31 12:14:47,348: https://help.pythonanywhere.com/pages/DebuggingImportError/
+2026-10-31 12:14:47,348: ***************************************************
+2026-10-31 12:14:48,950: Error running WSGI application
+2026-10-31 12:14:48,951: ModuleNotFoundError: No module named 'flask_cors'
+2026-10-31 12:14:48,951:   File "/var/www/osdelltecnologia_pythonanywhere_com_wsgi.py", line 8, in <module>
+2026-10-31 12:14:48,951:     from app import app as application
+2026-10-31 12:14:48,951: 
+2026-10-31 12:14:48,951:   File "/home/osdelltecnologia/backend_api/app.py", line 3, in <module>
+2026-10-31 12:14:48,951:     from flask_cors import CORS
+2026-10-31 12:14:48,952: ***************************************************
+2026-10-31 12:14:48,952: If you're seeing an import error and don't know why,
+2026-10-31 12:14:48,952: we have a dedicated help page to help you debug: 
+2026-10-31 12:14:48,953: https://help.pythonanywhere.com/pages/DebuggingImportError/
+2026-10-31 12:14:48,953: ***************************************************
+2026-10-31 12:14:49,378: Error running WSGI application
+2026-10-31 12:14:49,378: ModuleNotFoundError: No module named 'flask_cors'
+2026-10-31 12:14:49,378:   File "/var/www/osdelltecnologia_pythonanywhere_com_wsgi.py", line 8, in <module>
+2026-10-31 12:14:49,379:     from app import app as application
+2026-10-31 12:14:49,379: 
+2026-10-31 12:14:49,379:   File "/home/osdelltecnologia/backend_api/app.py", line 3, in <module>
+2026-10-31 12:14:49,379:     from flask_cors import CORS
+2026-10-31 12:14:49,379: ***************************************************
+2026-10-31 12:14:49,379: If you're seeing an import error and don't know why,
+2026-10-31 12:14:49,379: we have a dedicated help page to help you debug: 
+2026-10-31 12:14:49,379: https://help.pythonanywhere.com/pages/DebuggingImportError/
+2026-10-31 12:14:49,379: ***************************************************
+2026-10-31 12:14:50,936: Error running WSGI application
+2026-10-31 12:14:50,937: ModuleNotFoundError: No module named 'flask_cors'
+2026-10-31 12:14:50,937:   File "/var/www/osdelltecnologia_pythonanywhere_com_wsgi.py", line 8, in <module>
+2026-10-31 12:14:50,937:     from app import app as application
+2026-10-31 12:14:50,937: 
+2026-10-31 12:14:50,937:   File "/home/osdelltecnologia/backend_api/app.py", line 3, in <module>
+2026-10-31 12:14:50,937:     from flask_cors import CORS
+2026-10-31 12:14:50,937: ***************************************************
+2026-10-31 12:14:50,938: If you're seeing an import error and don't know why,
+2026-10-31 12:14:50,938: we have a dedicated help page to help you debug: 
+2026-10-31 12:14:50,938: https://help.pythonanywhere.com/pages/DebuggingImportError/
+2026-10-31 12:14:50,938: ***************************************************
+2026-10-31 12:14:51,361: Error running WSGI application
+2026-10-31 12:14:51,362: ModuleNotFoundError: No module named 'flask_cors'
+2026-10-31 12:14:51,362:   File "/var/www/osdelltecnologia_pythonanywhere_com_wsgi.py", line 8, in <module>
+2026-10-31 12:14:51,362:     from app import app as application
+2026-10-31 12:14:51,362: 
+2026-10-31 12:14:51,362:   File "/home/osdelltecnologia/backend_api/app.py", line 3, in <module>
+2026-10-31 12:14:51,362:     from flask_cors import CORS
+2026-10-31 12:14:51,363: ***************************************************
+2026-10-31 12:14:51,363: If you're seeing an import error and don't know why,
+2026-10-31 12:14:51,363: we have a dedicated help page to help you debug: 
+2026-10-31 12:14:51,363: https://help.pythonanywhere.com/pages/DebuggingImportError/
+2026-10-31 12:14:51,363: ***************************************************
+2026-10-31 12:14:52,951: Error running WSGI application
+2026-10-31 12:14:52,951: ModuleNotFoundError: No module named 'flask_cors'
+2026-10-31 12:14:52,952:   File "/var/www/osdelltecnologia_pythonanywhere_com_wsgi.py", line 8, in <module>
+2026-10-31 12:14:52,952:     from app import app as application
+2026-10-31 12:14:52,952: 
+2026-10-31 12:14:52,952:   File "/home/osdelltecnologia/backend_api/app.py", line 3, in <module>
+2026-10-31 12:14:52,952:     from flask_cors import CORS
+2026-10-31 12:14:52,952: ***************************************************
+2026-10-31 12:14:52,952: If you're seeing an import error and don't know why,
+2026-10-31 12:14:52,952: we have a dedicated help page to help you debug: 
+2026-10-31 12:14:52,953: https://help.pythonanywhere.com/pages/DebuggingImportError/
+2026-10-31 12:14:52,953: ***************************************************
+2026-10-31 12:14:53,379: Error running WSGI application
+2026-10-31 12:14:53,379: ModuleNotFoundError: No module named 'flask_cors'
+2026-10-31 12:14:53,379:   File "/var/www/osdelltecnologia_pythonanywhere_com_wsgi.py", line 8, in <module>
+2026-10-31 12:14:53,379:     from app import app as application
+2026-10-31 12:14:53,379: 
+2026-10-31 12:14:53,379:   File "/home/osdelltecnologia/backend_api/app.py", line 3, in <module>
+2026-10-31 12:14:53,380:     from flask_cors import CORS
+2026-10-31 12:14:53,380: ***************************************************
+2026-10-31 12:14:53,380: If you're seeing an import error and don't know why,
+2026-10-31 12:14:53,380: we have a dedicated help page to help you debug: 
+2026-10-31 12:14:53,380: https://help.pythonanywhere.com/pages/DebuggingImportError/
+2026-10-31 12:14:53,380: ***************************************************
+2026-10-31 12:14:55,509: Error running WSGI application
+2026-10-31 12:14:55,510: ModuleNotFoundError: No module named 'flask_cors'
+2026-10-31 12:14:55,510:   File "/var/www/osdelltecnologia_pythonanywhere_com_wsgi.py", line 8, in <module>
+2026-10-31 12:14:55,510:     from app import app as application
+2026-10-31 12:14:55,510: 
+2026-10-31 12:14:55,510:   File "/home/osdelltecnologia/backend_api/app.py", line 3, in <module>
+2026-10-31 12:14:55,510:     from flask_cors import CORS
+2026-10-31 12:14:55,510: ***************************************************
+2026-10-31 12:14:55,510: If you're seeing an import error and don't know why,
+2026-10-31 12:14:55,511: we have a dedicated help page to help you debug: 
+2026-10-31 12:14:55,511: https://help.pythonanywhere.com/pages/DebuggingImportError/
+2026-10-31 12:14:55,511: ***************************************************
+2026-10-31 12:14:55,930: Error running WSGI application
+2026-10-31 12:14:55,930: ModuleNotFoundError: No module named 'flask_cors'
+2026-10-31 12:14:55,931:   File "/var/www/osdelltecnologia_pythonanywhere_com_wsgi.py", line 8, in <module>
+2026-10-31 12:14:55,931:     from app import app as application
+2026-10-31 12:14:55,931: 
+2026-10-31 12:14:55,931:   File "/home/osdelltecnologia/backend_api/app.py", line 3, in <module>
+2026-10-31 12:14:55,931:     from flask_cors import CORS
+2026-10-31 12:14:55,931: ***************************************************
+2026-10-31 12:14:55,931: If you're seeing an import error and don't know why,
+2026-10-31 12:14:55,932: we have a dedicated help page to help you debug: 
+2026-10-31 12:14:55,932: https://help.pythonanywhere.com/pages/DebuggingImportError/
+2026-10-31 12:14:55,932: ***************************************************
+2026-10-31 12:14:57,522: Error running WSGI application
+2026-10-31 12:14:57,522: ModuleNotFoundError: No module named 'flask_cors'
+2026-10-31 12:14:57,522:   File "/var/www/osdelltecnologia_pythonanywhere_com_wsgi.py", line 8, in <module>
+2026-10-31 12:14:57,522:     from app import app as application
+2026-10-31 12:14:57,522: 
+2026-10-31 12:14:57,522:   File "/home/osdelltecnologia/backend_api/app.py", line 3, in <module>
+2026-10-31 12:14:57,523:     from flask_cors import CORS
+2026-10-31 12:14:57,523: ***************************************************
+2026-10-31 12:14:57,523: If you're seeing an import error and don't know why,
+2026-10-31 12:14:57,523: we have a dedicated help page to help you debug: 
+2026-10-31 12:14:57,523: https://help.pythonanywhere.com/pages/DebuggingImportError/
+2026-10-31 12:14:57,523: ***************************************************
+2026-10-31 12:14:57,933: Error running WSGI application
+2026-10-31 12:14:57,933: ModuleNotFoundError: No module named 'flask_cors'
+2026-10-31 12:14:57,934:   File "/var/www/osdelltecnologia_pythonanywhere_com_wsgi.py", line 8, in <module>
+2026-10-31 12:14:57,934:     from app import app as application
+2026-10-31 12:14:57,934: 
+2026-10-31 12:14:57,934:   File "/home/osdelltecnologia/backend_api/app.py", line 3, in <module>
+2026-10-31 12:14:57,935:     from flask_cors import CORS
+2026-10-31 12:14:57,935: ***************************************************
+2026-10-31 12:14:57,935: If you're seeing an import error and don't know why,
+2026-10-31 12:14:57,935: we have a dedicated help page to help you debug: 
+2026-10-31 12:14:57,935: https://help.pythonanywhere.com/pages/DebuggingImportError/
+2026-10-31 12:14:57,936: ***************************************************
+2026-10-31 12:14:58,931: Error running WSGI application
+2026-10-31 12:14:58,932: ModuleNotFoundError: No module named 'flask_cors'
+2026-10-31 12:14:58,932:   File "/var/www/osdelltecnologia_pythonanywhere_com_wsgi.py", line 8, in <module>
+2026-10-31 12:14:58,932:     from app import app as application
+2026-10-31 12:14:58,932: 
+2026-10-31 12:14:58,932:   File "/home/osdelltecnologia/backend_api/app.py", line 3, in <module>
+2026-10-31 12:14:58,932:     from flask_cors import CORS
+2026-10-31 12:14:58,932: ***************************************************
+2026-10-31 12:14:58,933: If you're seeing an import error and don't know why,
+2026-10-31 12:14:58,933: we have a dedicated help page to help you debug: 
+2026-10-31 12:14:58,933: https://help.pythonanywhere.com/pages/DebuggingImportError/
+2026-10-31 12:14:58,933: ***************************************************
+2026-10-31 12:14:59,342: Error running WSGI application
+2026-10-31 12:14:59,342: ModuleNotFoundError: No module named 'flask_cors'
+2026-10-31 12:14:59,343:   File "/var/www/osdelltecnologia_pythonanywhere_com_wsgi.py", line 8, in <module>
+2026-10-31 12:14:59,343:     from app import app as application
+2026-10-31 12:14:59,343: 
+2026-10-31 12:14:59,343:   File "/home/osdelltecnologia/backend_api/app.py", line 3, in <module>
+2026-10-31 12:14:59,343:     from flask_cors import CORS
+2026-10-31 12:14:59,343: ***************************************************
+2026-10-31 12:14:59,343: If you're seeing an import error and don't know why,
+2026-10-31 12:14:59,343: we have a dedicated help page to help you debug: 
+2026-10-31 12:14:59,344: https://help.pythonanywhere.com/pages/DebuggingImportError/
+2026-10-31 12:14:59,344: ***************************************************
+2026-10-31 12:15:01,387: Error running WSGI application
+2026-10-31 12:15:01,387: ModuleNotFoundError: No module named 'flask_cors'
+2026-10-31 12:15:01,388:   File "/var/www/osdelltecnologia_pythonanywhere_com_wsgi.py", line 8, in <module>
+2026-10-31 12:15:01,388:     from app import app as application
+2026-10-31 12:15:01,388: 
+2026-10-31 12:15:01,388:   File "/home/osdelltecnologia/backend_api/app.py", line 3, in <module>
+2026-10-31 12:15:01,388:     from flask_cors import CORS
+2026-10-31 12:15:01,388: ***************************************************
+2026-10-31 12:15:01,388: If you're seeing an import error and don't know why,
+2026-10-31 12:15:01,388: we have a dedicated help page to help you debug: 
+2026-10-31 12:15:01,388: https://help.pythonanywhere.com/pages/DebuggingImportError/
+2026-10-31 12:15:01,388: ***************************************************
+2026-10-31 12:15:01,799: Error running WSGI application
+2026-10-31 12:15:01,800: ModuleNotFoundError: No module named 'flask_cors'
+2026-10-31 12:15:01,800:   File "/var/www/osdelltecnologia_pythonanywhere_com_wsgi.py", line 8, in <module>
+2026-10-31 12:15:01,800:     from app import app as application
+2026-10-31 12:15:01,800: 
+2026-10-31 12:15:01,800:   File "/home/osdelltecnologia/backend_api/app.py", line 3, in <module>
+2026-10-31 12:15:01,802:     from flask_cors import CORS
+2026-10-31 12:15:01,802: ***************************************************
+2026-10-31 12:15:01,802: If you're seeing an import error and don't know why,
+2026-10-31 12:15:01,802: we have a dedicated help page to help you debug: 
+2026-10-31 12:15:01,803: https://help.pythonanywhere.com/pages/DebuggingImportError/
+2026-10-31 12:15:01,803: ***************************************************
+2026-10-31 12:15:15,420: Error running WSGI application
+2026-10-31 12:15:15,426: ModuleNotFoundError: No module named 'flask_cors'
+2026-10-31 12:15:15,426:   File "/var/www/osdelltecnologia_pythonanywhere_com_wsgi.py", line 8, in <module>
+2026-10-31 12:15:15,426:     from app import app as application
+2026-10-31 12:15:15,426: 
+2026-10-31 12:15:15,427:   File "/home/osdelltecnologia/backend_api/app.py", line 3, in <module>
+2026-10-31 12:15:15,427:     from flask_cors import CORS
+2026-10-31 12:15:15,427: ***************************************************
+2026-10-31 12:15:15,427: If you're seeing an import error and don't know why,
+2026-10-31 12:15:15,427: we have a dedicated help page to help you debug: 
+2026-10-31 12:15:15,427: https://help.pythonanywhere.com/pages/DebuggingImportError/
+2026-10-31 12:15:15,427: ***************************************************
+2026-10-31 12:15:21,384: Error running WSGI application
+2026-10-31 12:15:21,384: ModuleNotFoundError: No module named 'flask_cors'
+2026-10-31 12:15:21,385:   File "/var/www/osdelltecnologia_pythonanywhere_com_wsgi.py", line 8, in <module>
+2026-10-31 12:15:21,385:     from app import app as application
+2026-10-31 12:15:21,385: 
+2026-10-31 12:15:21,385:   File "/home/osdelltecnologia/backend_api/app.py", line 3, in <module>
+2026-10-31 12:15:21,385:     from flask_cors import CORS
+2026-10-31 12:15:21,385: ***************************************************
+2026-10-31 12:15:21,386: If you're seeing an import error and don't know why,
+2026-10-31 12:15:21,386: we have a dedicated help page to help you debug: 
+2026-10-31 12:15:21,386: https://help.pythonanywhere.com/pages/DebuggingImportError/
+2026-10-31 12:15:21,386: ***************************************************
+2026-10-31 12:15:21,796: Error running WSGI application
+2026-10-31 12:15:21,796: ModuleNotFoundError: No module named 'flask_cors'
+2026-10-31 12:15:21,797:   File "/var/www/osdelltecnologia_pythonanywhere_com_wsgi.py", line 8, in <module>
+2026-10-31 12:15:21,797:     from app import app as application
+2026-10-31 12:15:21,797: 
+2026-10-31 12:15:21,797:   File "/home/osdelltecnologia/backend_api/app.py", line 3, in <module>
+2026-10-31 12:15:21,797:     from flask_cors import CORS
+2026-10-31 12:15:21,798: ***************************************************
+2026-10-31 12:15:21,798: If you're seeing an import error and don't know why,
+2026-10-31 12:15:21,798: we have a dedicated help page to help you debug: 
+2026-10-31 12:15:21,798: https://help.pythonanywhere.com/pages/DebuggingImportError/
+2026-10-31 12:15:21,798: ***************************************************
+2026-10-31 12:15:31,366: Error running WSGI application
+2026-10-31 12:15:31,367: ModuleNotFoundError: No module named 'flask_cors'
+2026-10-31 12:15:31,367:   File "/var/www/osdelltecnologia_pythonanywhere_com_wsgi.py", line 8, in <module>
+2026-10-31 12:15:31,367:     from app import app as application
+2026-10-31 12:15:31,367: 
+2026-10-31 12:15:31,367:   File "/home/osdelltecnologia/backend_api/app.py", line 3, in <module>
+2026-10-31 12:15:31,367:     from flask_cors import CORS
+2026-10-31 12:15:31,367: ***************************************************
+2026-10-31 12:15:31,367: If you're seeing an import error and don't know why,
+2026-10-31 12:15:31,367: we have a dedicated help page to help you debug: 
+2026-10-31 12:15:31,367: https://help.pythonanywhere.com/pages/DebuggingImportError/
+2026-10-31 12:15:31,367: ***************************************************
+2026-10-31 12:15:31,784: Error running WSGI application
+2026-10-31 12:15:31,784: ModuleNotFoundError: No module named 'flask_cors'
+2026-10-31 12:15:31,785:   File "/var/www/osdelltecnologia_pythonanywhere_com_wsgi.py", line 8, in <module>
+2026-10-31 12:15:31,785:     from app import app as application
+2026-10-31 12:15:31,785: 
+2026-10-31 12:15:31,785:   File "/home/osdelltecnologia/backend_api/app.py", line 3, in <module>
+2026-10-31 12:15:31,786:     from flask_cors import CORS
+2026-10-31 12:15:31,786: ***************************************************
+2026-10-31 12:15:31,786: If you're seeing an import error and don't know why,
+2026-10-31 12:15:31,787: we have a dedicated help page to help you debug: 
+2026-10-31 12:15:31,787: https://help.pythonanywhere.com/pages/DebuggingImportError/
+2026-10-31 12:15:31,788: ***************************************************
+2026-10-31 12:15:38,225: Error running WSGI application
+2026-10-31 12:15:38,231: ModuleNotFoundError: No module named 'flask_cors'
+2026-10-31 12:15:38,231:   File "/var/www/osdelltecnologia_pythonanywhere_com_wsgi.py", line 8, in <module>
+2026-10-31 12:15:38,231:     from app import app as application
+2026-10-31 12:15:38,231: 
+2026-10-31 12:15:38,231:   File "/home/osdelltecnologia/backend_api/app.py", line 3, in <module>
+2026-10-31 12:15:38,232:     from flask_cors import CORS
+2026-10-31 12:15:38,232: ***************************************************
+2026-10-31 12:15:38,232: If you're seeing an import error and don't know why,
+2026-10-31 12:15:38,232: we have a dedicated help page to help you debug: 
+2026-10-31 12:15:38,232: https://help.pythonanywhere.com/pages/DebuggingImportError/
+2026-10-31 12:15:38,233: ***************************************************
+2026-10-31 12:15:39,638: Error running WSGI application
+2026-10-31 12:15:39,639: ModuleNotFoundError: No module named 'flask_cors'
+2026-10-31 12:15:39,639:   File "/var/www/osdelltecnologia_pythonanywhere_com_wsgi.py", line 8, in <module>
+2026-10-31 12:15:39,639:     from app import app as application
+2026-10-31 12:15:39,639: 
+2026-10-31 12:15:39,639:   File "/home/osdelltecnologia/backend_api/app.py", line 3, in <module>
+2026-10-31 12:15:39,639:     from flask_cors import CORS
+2026-10-31 12:15:39,640: ***************************************************
+2026-10-31 12:15:39,640: If you're seeing an import error and don't know why,
+2026-10-31 12:15:39,640: we have a dedicated help page to help you debug: 
+2026-10-31 12:15:39,640: https://help.pythonanywhere.com/pages/DebuggingImportError/
+2026-10-31 12:15:39,640: ***************************************************
+2026-10-31 12:15:41,378: Error running WSGI application
+2026-10-31 12:15:41,378: ModuleNotFoundError: No module named 'flask_cors'
+2026-10-31 12:15:41,378:   File "/var/www/osdelltecnologia_pythonanywhere_com_wsgi.py", line 8, in <module>
+2026-10-31 12:15:41,379:     from app import app as application
+2026-10-31 12:15:41,380: 
+2026-10-31 12:15:41,380:   File "/home/osdelltecnologia/backend_api/app.py", line 3, in <module>
+2026-10-31 12:15:41,380:     from flask_cors import CORS
+2026-10-31 12:15:41,380: ***************************************************
+2026-10-31 12:15:41,380: If you're seeing an import error and don't know why,
+2026-10-31 12:15:41,380: we have a dedicated help page to help you debug: 
+2026-10-31 12:15:41,381: https://help.pythonanywhere.com/pages/DebuggingImportError/
+2026-10-31 12:15:41,381: ***************************************************
+2026-10-31 12:15:41,817: Error running WSGI application
+2026-10-31 12:15:41,820: ModuleNotFoundError: No module named 'flask_cors'
+2026-10-31 12:15:41,823:   File "/var/www/osdelltecnologia_pythonanywhere_com_wsgi.py", line 8, in <module>
+2026-10-31 12:15:41,825:     from app import app as application
+2026-10-31 12:15:41,827: 
+2026-10-31 12:15:41,827:   File "/home/osdelltecnologia/backend_api/app.py", line 3, in <module>
+2026-10-31 12:15:41,827:     from flask_cors import CORS
+2026-10-31 12:15:41,827: ***************************************************
+2026-10-31 12:15:41,828: If you're seeing an import error and don't know why,
+2026-10-31 12:15:41,828: we have a dedicated help page to help you debug: 
+2026-10-31 12:15:41,828: https://help.pythonanywhere.com/pages/DebuggingImportError/
+2026-10-31 12:15:41,832: ***************************************************
+2026-10-31 12:15:42,398: Error running WSGI application
+2026-10-31 12:15:42,398: ModuleNotFoundError: No module named 'flask_cors'
+2026-10-31 12:15:42,399:   File "/var/www/osdelltecnologia_pythonanywhere_com_wsgi.py", line 8, in <module>
+2026-10-31 12:15:42,399:     from app import app as application
+2026-10-31 12:15:42,399: 
+2026-10-31 12:15:42,399:   File "/home/osdelltecnologia/backend_api/app.py", line 3, in <module>
+2026-10-31 12:15:42,399:     from flask_cors import CORS
+2026-10-31 12:15:42,399: ***************************************************
+2026-10-31 12:15:42,400: If you're seeing an import error and don't know why,
+2026-10-31 12:15:42,400: we have a dedicated help page to help you debug: 
+2026-10-31 12:15:42,400: https://help.pythonanywhere.com/pages/DebuggingImportError/
+2026-10-31 12:15:42,400: ***************************************************
+2026-10-31 12:15:42,815: Error running WSGI application
+2026-10-31 12:15:42,816: ModuleNotFoundError: No module named 'flask_cors'
+2026-10-31 12:15:42,816:   File "/var/www/osdelltecnologia_pythonanywhere_com_wsgi.py", line 8, in <module>
+2026-10-31 12:15:42,816:     from app import app as application
+2026-10-31 12:15:42,816: 
+2026-10-31 12:15:42,816:   File "/home/osdelltecnologia/backend_api/app.py", line 3, in <module>
+2026-10-31 12:15:42,816:     from flask_cors import CORS
+2026-10-31 12:15:42,817: ***************************************************
+2026-10-31 12:15:42,817: If you're seeing an import error and don't know why,
+2026-10-31 12:15:42,817: we have a dedicated help page to help you debug: 
+2026-10-31 12:15:42,817: https://help.pythonanywhere.com/pages/DebuggingImportError/
+2026-10-31 12:15:42,817: ***************************************************

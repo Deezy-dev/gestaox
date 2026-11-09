@@ -1,0 +1,13 @@
+{
+	"appId": "ao.osdel.cliente",
+	"appName": "OSDEL Cliente",
+	"webDir": "dist",
+	"bundledWebRuntime": false,
+	"server": {
+		"androidScheme": "https",
+		"cleartext": true
+	},
+	"android": {
+		"allowMixedContent": true
+	}
+}
